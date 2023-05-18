@@ -8,7 +8,7 @@ const port = 5000;
 app.get('/api/news', async (req, res) => {
   try {
     const { country, category, page, pageSize } = req.query;
-    const apiKey = process.env.REACT_NEWS_API; // Replace with your actual API key
+    const apiKey = process.env.NEWS_API; // Replace with your actual API key
     const apiUrl = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&page=${page}&pageSize=${pageSize}`;
 
     const response = await axios.get(apiUrl, {
